@@ -1,10 +1,12 @@
 
 from dataclasses import dataclass
 
+
 @dataclass
 class TypeOfMainAssets:
     code: int
     type: str
+
 
 @dataclass
 class MoveOfMainAssets:
@@ -13,6 +15,7 @@ class MoveOfMainAssets:
     remainder: float
     received: float
     output: float
+
 
 type_array = []
 type_array.append(TypeOfMainAssets(1, "Будівлі"))
@@ -30,25 +33,28 @@ move_array.append(MoveOfMainAssets("Дніпрянка", 3, 206.00, 34.00, 50.00
 move_array.append(MoveOfMainAssets("Універсам 22", 4, 116.00, 64.00, 23.00))
 move_array.append(MoveOfMainAssets("Дніпрянка", 4, 34.00, 23.00, 25.00))
 
+
 def printMoveOfMainAssets(moveOfMainAssets):
-    '''printMoveOfMainAssets funtcion prints
+    '''printMoveOfMainAssets function prints
     "Рух основних засобів"
     with names and values '''
 
-    print ("Назва: {name}, Код: {code}, Залишок,грн.: {remainder}, Надійшло,грн: {received} Вибуток, грн.: {output}"
-        .format(name=moveOfMainAssets.name, code=MoveOfMainAssets.code, remainder=moveOfMainAssets.remainder,
-                 received=moveOfMainAssets.received, output=moveOfMainAssets.output))
+    print(
+        f'Назва: {moveOfMainAssets.name}, Код: {moveOfMainAssets.code}, Залишок,грн.: {moveOfMainAssets.remainder}, Надійшло,грн: {moveOfMainAssets.received} Вибуток, грн.: {moveOfMainAssets.output}')
+
 
 for data in move_array:
     printMoveOfMainAssets(data)
+
 
 def printTypeOfMainAssets(typeOfMainAssets):
     '''printTypeOfMainAssets function prints
     "Вид основних засобів"
     with names and values'''
 
-    print("Код: {code}, Тип: {type}"
-           .format(code=typeOfMainAssets.code, type=typeOfMainAssets.type))
+    print(f"Код: {typeOfMainAssets.code}, Тип: {typeOfMainAssets.type}")
+
 
 for data in type_array:
     printTypeOfMainAssets(data)
+
