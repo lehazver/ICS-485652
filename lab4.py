@@ -35,7 +35,7 @@ def printMoveOfMainAssets(moveOfMainAssets):
     "Рух основних засобів"
     with names and values '''
 
-print ("Назва: {name}, Код: {code}, Залишок,грн.: {remainder}, Надійшло,грн: {received} Вибуток, грн.: {output}"
+    print ("Назва: {name}, Код: {code}, Залишок,грн.: {remainder}, Надійшло,грн: {received} Вибуток, грн.: {output}"
         .format(name=moveOfMainAssets.name, code=MoveOfMainAssets.code, remainder=moveOfMainAssets.remainder,
                  received=moveOfMainAssets.received, output=moveOfMainAssets.output))
 
